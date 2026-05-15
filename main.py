@@ -109,8 +109,12 @@ for folder in oszf:
                 repl = 'GridSize: 64'
             elif line.startswith('Tags:'):
                 repl = 'Tags:'
+            elif line.startswith('HPDrainRate') and config['taiko'] ==True:
+                repl = 'HPDrainRate:5'
             elif line.startswith('CircleSize') and config['taiko'] ==True:
                 repl = 'CircleSize:5'
+            elif line.startswith('OverallDifficulty') and config['taiko'] ==True:
+                repl = 'OverallDifficulty:6'
             elif line.startswith('ApproachRate') and config['taiko'] ==True:
                 repl = 'ApproachRate:5'
             elif line.startswith('Version:'):
